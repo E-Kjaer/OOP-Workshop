@@ -3,11 +3,13 @@ package org.example;
 import java.util.ArrayList;
 
 public class Building {
-    private ArrayList<Sensor> sensors = new ArrayList<Sensor>();
-    private ArrayList<Actuator> actuators = new ArrayList<Actuator>();
+    private ArrayList<Sensor> sensors;
+    private ArrayList<Actuator> actuators;
     private String buildingName;
 
     public Building(String buildingName) {
+        sensors = new ArrayList<Sensor>();
+        actuators = new ArrayList<Actuator>();
         this.buildingName = buildingName;
     }
     public boolean addSensor(Sensor sensor) {
