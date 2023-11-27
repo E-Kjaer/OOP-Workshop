@@ -13,6 +13,10 @@ public class Actuator {
         this.sensor = sensor;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public float getSetPoint() {
         return setPoint;
     }
@@ -23,9 +27,5 @@ public class Actuator {
 
     public boolean checkValue() {
         return sensor.getValue() > this.setPoint;
-    }
-
-    public boolean equals(String name) {
-        return this.name.equals(name);
     }
 }
