@@ -14,7 +14,9 @@ public class Sensor {
     }
 
     public float getValue() {
-        return (float) Math.random() * 100;
+        float value = (float) Math.random() * 100;
+        this.history.add(value);
+        return value;
     }
 
     public String getName() {
