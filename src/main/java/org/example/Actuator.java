@@ -24,4 +24,8 @@ public class Actuator {
     public boolean checkValue() {
         return sensor.getValue() > this.setPoint;
     }
+
+    public boolean equals(String name) {
+        return this.name.equals(name);
+    }
 }

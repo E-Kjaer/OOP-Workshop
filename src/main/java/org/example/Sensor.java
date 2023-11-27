@@ -30,4 +30,8 @@ public class Sensor {
     public ArrayList<Float> getHistory() {
         return history;
     }
+
+    public boolean equals(String name) {
+        return this.name.equals(name);
+    }
 }
