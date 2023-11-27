@@ -31,23 +31,11 @@ public class Building {
     }
 
     public boolean removeSensor(String name) {
-        for (int i = 0; i < this.sensors.size(); i++) {
-            if (sensors.get(i).getName().equals(name)) {
-                sensors.remove(i);
-                return true;
-            }
-        }
-        return false;
+        return sensors.remove(name);
     }
 
     public boolean removeActuator(String name) {
-        for (int i = 0; i < this.actuators.size(); i++) {
-            if (actuators.get(i).getName().equals(name)) {
-                actuators.remove(i);
-                return true;
-            }
-        }
-        return false;
+        return actuators.remove(name);
     }
 
     public ArrayList<Sensor> getSensors() {
@@ -64,28 +52,6 @@ public class Building {
 
     public boolean equals(String name) {
         return this.buildingName.equals(name);
-    }
-
-    public String toString() {
-        return "Name: " + this.buildingName + "\n" +
-                "Sensors: " + printSensors() + "\n" +
-                "Actuators: " + printActuators();
-    }
-
-    private String printActuators() {
-        String result = "";
-        for (Actuator actuator : this.actuators) {
-            result += actuator.getName() + "\n";
-        }
-        return result;
-    }
-
-    private String printSensors() {
-        String result = "";
-        for (Sensor sensor : this.sensors) {
-            result += sensor.getName() + "\n";
-        }
-        return result;
     }
 
 }
