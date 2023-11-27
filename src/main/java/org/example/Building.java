@@ -3,22 +3,35 @@ package org.example;
 import java.util.ArrayList;
 
 public class Building {
-    ArrayList<Sensor> sensors = new ArrayList<Sensor>();
-    ArrayList<Actuator> actuators = new ArrayList<Actuator>();
-    String buildingName;
+    private ArrayList<Sensor> sensors = new ArrayList<Sensor>();
+    private ArrayList<Actuator> actuators = new ArrayList<Actuator>();
+    private String buildingName;
 
     public Building(String buildingName) {
         this.buildingName = buildingName;
     }
     public boolean addSensor(Sensor sensor) {
-        return false;
+        if (sensor != null){
+            sensors.add(sensor);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean addActuator(Actuator actuator ) {
-        return false;
+        if (actuator != null) {
+            actuators.add(actuator);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean removeSensor(String name) {
+
         return false;
     }
 
@@ -32,6 +45,14 @@ public class Building {
 
     public ArrayList<Actuator> getActuator() {
         return actuators;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public boolean equals(String name) {
+        return this.buildingName.equals(name);
     }
 
 }
