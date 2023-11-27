@@ -10,11 +10,11 @@ public class Building {
     public Building(String buildingName) {
         this.buildingName = buildingName;
     }
-    public boolean addSensor(Sensor) {
+    public boolean addSensor(Sensor sensor) {
         return false;
     }
 
-    public boolean addActuator(Actuator) {
+    public boolean addActuator(Actuator actuator ) {
         return false;
     }
 
