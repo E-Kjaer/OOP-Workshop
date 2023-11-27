@@ -31,12 +31,11 @@ public class Building {
     }
 
     public boolean removeSensor(String name) {
-
-        return false;
+        return sensors.remove(name);
     }
 
     public boolean removeActuator(String name) {
-        return false;
+        return actuators.remove(name);
     }
 
     public ArrayList<Sensor> getSensors() {
